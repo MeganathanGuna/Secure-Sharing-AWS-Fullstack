@@ -1,0 +1,20 @@
+<!-- src/app/pages/upload/upload.component.html -->
+<mat-card class="upload-card">
+  <h2>Upload File</h2>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Owner ID</mat-label>
+    <input matInput [(ngModel)]="ownerId" placeholder="Enter Owner ID">
+  </mat-form-field>
+
+  <input type="file" (change)="onFileSelect($event)" />
+
+  <button mat-raised-button color="primary" (click)="uploadFile()" [disabled]="!selectedFile">
+    Upload Securely
+  </button>
+
+  <div *ngIf="fileHash" class="hash-box">
+    <strong>Generated File Hash:</strong>
+    <p>{{ fileHash }}</p>
+  </div>
+</mat-card>

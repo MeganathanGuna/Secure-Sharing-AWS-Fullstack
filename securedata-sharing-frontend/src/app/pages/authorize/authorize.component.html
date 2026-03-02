@@ -1,0 +1,25 @@
+<!-- src/app/pages/authorize/authorize.component.html -->
+<div class="page-container">
+  <mat-card class="card">
+    <h2>Authorize User</h2>
+
+    <mat-form-field appearance="outline">
+      <mat-label>File Hash</mat-label>
+      <input matInput [(ngModel)]="fileHash">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Owner ID</mat-label>
+      <input matInput [(ngModel)]="ownerId">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>New User ID</mat-label>
+      <input matInput [(ngModel)]="userId">
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" (click)="authorize()">
+      Grant Access
+    </button>
+  </mat-card>
+</div>

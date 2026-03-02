@@ -1,0 +1,13 @@
+/* src/app/app.component.css (basic styles, add if needed) */
+.main-container {
+  display: flex;
+}
+
+app-sidebar {
+  width: 200px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}

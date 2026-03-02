@@ -1,0 +1,22 @@
+<!-- src/app/pages/access-check/access-check.component.html -->
+<div class="page-container">
+  <mat-card class="card">
+    <h2>Access Check</h2>
+
+    <mat-form-field appearance="outline">
+      <mat-label>File Hash</mat-label>
+      <input matInput [(ngModel)]="fileHash">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>User ID</mat-label>
+      <input matInput [(ngModel)]="userId">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="check()">
+      Verify Access
+    </button>
+
+    <h3 *ngIf="result">{{ result }}</h3>
+  </mat-card>
+</div>
